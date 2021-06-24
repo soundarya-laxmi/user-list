@@ -1,0 +1,56 @@
+.formcontrol {
+    /* background-color: #a892ee; */
+    background-color:turquoise;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    gap: 1rem;
+    text-align: left;
+}
+
+.formcontrol label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.formcontrol input {
+    display: block;
+    border: 1px solid #ccc;
+    font: inherit;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.formcontrol input:focus {
+    outline: none;
+    background: #fad0ec;
+    border-color: #8b005d;
+}
+
+.namecontrol.invalid input {
+    background: #ffd7d7;
+    border-color: red;
+}
+  
+.namecontrol.invalid label {
+    color: red;
+}
+
+.agecontrol.invalid input {
+    background: #ffd7d7;
+    border-color: red;
+}
+  
+.agecontrol.invalid label {
+    color: red;
+}
