@@ -19,10 +19,10 @@ function App() {
   }
   
   return (
-    <div>
+    <>
       <UserForm onSaveUserData={saveUserDataHandler} />
       <UserList users={users}/>
-    </div>
+    </>
   );
 }
 
