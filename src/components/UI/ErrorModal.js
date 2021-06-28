@@ -18,16 +18,18 @@ const OverLay = props => {
                     {props.errorTitle}
                 </h2>
             </header>
-            <div className={styles.content}>
-                <p>
-                    {props.errorMessage}
-                </p>
+            <div className={styles.body}>
+                <div className={styles.content}>
+                    <p>
+                        {props.errorMessage}
+                    </p>
+                </div>
+                <footer className={styles.actions}>
+                    <Button onClick={props.onClick}>
+                        Okay
+                    </Button>
+                </footer>
             </div>
-            <footer className={styles.actions}>
-                <Button onClick={props.onClick}>
-                    Okay
-                </Button>
-            </footer>
         </Card>
     )
 }

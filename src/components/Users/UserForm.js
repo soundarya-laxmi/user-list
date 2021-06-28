@@ -16,7 +16,7 @@ const UserForm = (props) => {
         const enteredName = nameInputRef.current.value;
         const enteredAge = ageInputRef.current.value;
 
-        if (enteredName.trim().length === 0 && enteredAge.trim().length === 0 && +enteredAge < 1){
+        if (enteredName.trim().length === 0 || enteredAge.trim().length === 0){
             setError({
                 errorTitle: "Invalid Input",
                 errorMessage: "Please enter valid name and age (non empty values)"
@@ -24,21 +24,13 @@ const UserForm = (props) => {
             return;
         }
 
-        if (enteredName.trim().length === 0 && enteredAge.trim().length > 0){
+        if (+enteredAge < 1) {
             setError({
-                errorTitle: "Invalid Name",
-                errorMessage: "Please enter valid name (non empty values)"
-            })
+              errorTitle: 'Invalid age',
+              errorMessage: 'Please enter a valid age (> 0).',
+            });
             return;
-        }
-
-        if (enteredName.trim().length > 0 && enteredAge.trim().length === 0 && +enteredAge < 1){
-            setError({
-                errorTitle: "Invalid Age",
-                errorMessage: "Please enter valid age (non empty and non negative values)"
-            })
-            return;
-        }
+          }
 
         const enteredData = {name: enteredName, age: enteredAge}
         props.onSaveUserData(enteredData);
